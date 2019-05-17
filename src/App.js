@@ -1,14 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
-import CEPForm from './components/CEPForm'
+import Tabs from 'react-bootstrap/Tabs';
+import Tab from 'react-bootstrap/Tab';
+
+import CEPCtrl from './components/CEPCtrl';
 
 function App() {
   return (
     <div className="App">
-      <CEPForm />
+      <Tabs defaultActiveKey="cep" id="trabalhos-tf">
+        <Tab eventKey="cep" title="CEPs">
+          <CEPCtrl />
+        </Tab>
+        <Tab eventKey="?" title="?" disabled />
+      </Tabs>
     </div>
   );
 }
